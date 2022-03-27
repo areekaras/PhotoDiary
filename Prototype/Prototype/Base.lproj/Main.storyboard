@@ -29,7 +29,7 @@
                         <tabBarAppearance key="scrollEdgeAppearance"/>
                     </tabBar>
                     <connections>
-                        <segue destination="qKf-k4-yWE" kind="relationship" relationship="viewControllers" id="1ZW-b1-pWL"/>
+                        <segue destination="I4X-dj-u0r" kind="relationship" relationship="viewControllers" id="1ZW-b1-pWL"/>
                         <segue destination="BHF-Im-LhX" kind="relationship" relationship="viewControllers" id="ViN-8z-HyG"/>
                     </connections>
                 </tabBarController>
@@ -37,7 +37,7 @@
             </objects>
             <point key="canvasLocation" x="-407" y="-64"/>
         </scene>
-        <!--Feed View Controller-->
+        <!--Photo Diary-->
         <scene sceneID="9dP-n7-tfj">
             <objects>
                 <tableViewController id="qKf-k4-yWE" customClass="FeedViewController" customModule="Prototype" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,30 +46,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="XE3-zC-AiX">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="16"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="SVD-Iu-nS1">
-                            <rect key="frame" x="0.0" y="283" width="414" height="16"/>
+                            <rect key="frame" x="0.0" y="272" width="414" height="5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="200" id="Pfl-jK-i1X" customClass="FeedImageCell" customModule="Prototype" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="60.5" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="49.5" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pfl-jK-i1X" id="eKk-Oe-beA">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ot8-pK-VyU">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ot8-pK-VyU">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="200" id="3Dd-8g-FD0"/>
                                             </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jAu-ad-jcg">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfS-5g-p0j">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="90" id="7wC-tj-htD"/>
+                                                <constraint firstAttribute="width" constant="90" id="PcL-h5-h2I"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SE6-SA-nLk">
+                                            <rect key="frame" x="0.0" y="160" width="414" height="40"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="PgP-qO-MTQ"/>
+                                            </constraints>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jAu-ad-jcg" userLabel="Date Container">
                                             <rect key="frame" x="15" y="10" width="30.5" height="45"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yZ-io-SXr">
@@ -92,10 +107,10 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="61h-JN-YHO">
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="61h-JN-YHO" userLabel="Location Temp Container">
                                             <rect key="frame" x="15" y="172" width="384" height="20"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="X9H-Rs-IjV">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="X9H-Rs-IjV" userLabel="Location Container">
                                                     <rect key="frame" x="0.0" y="0.0" width="111" height="20"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUx-YS-H6I">
@@ -126,7 +141,7 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Hb-V8-Dor">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Hb-V8-Dor" userLabel="Temp Container">
                                                     <rect key="frame" x="330.5" y="0.0" width="53.5" height="20"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beX-jc-WoI">
@@ -161,21 +176,28 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="sfS-5g-p0j" firstAttribute="leading" secondItem="eKk-Oe-beA" secondAttribute="leading" id="0Ta-86-Tw9"/>
                                         <constraint firstItem="Ot8-pK-VyU" firstAttribute="leading" secondItem="eKk-Oe-beA" secondAttribute="leading" id="2Af-Bu-i4e"/>
                                         <constraint firstItem="61h-JN-YHO" firstAttribute="leading" secondItem="eKk-Oe-beA" secondAttribute="leading" constant="15" id="4XI-z9-cIc"/>
+                                        <constraint firstItem="SE6-SA-nLk" firstAttribute="leading" secondItem="eKk-Oe-beA" secondAttribute="leading" id="4kF-qZ-3ep"/>
                                         <constraint firstItem="jAu-ad-jcg" firstAttribute="leading" secondItem="eKk-Oe-beA" secondAttribute="leading" constant="15" id="5SD-2Q-J2w"/>
+                                        <constraint firstAttribute="trailing" secondItem="SE6-SA-nLk" secondAttribute="trailing" id="CW2-Lf-67T"/>
                                         <constraint firstAttribute="bottom" secondItem="Ot8-pK-VyU" secondAttribute="bottom" id="IVP-BY-SIN"/>
                                         <constraint firstAttribute="trailing" secondItem="61h-JN-YHO" secondAttribute="trailing" constant="15" id="MZi-pp-uF8"/>
                                         <constraint firstAttribute="trailing" secondItem="Ot8-pK-VyU" secondAttribute="trailing" id="NY6-xU-obk"/>
+                                        <constraint firstItem="sfS-5g-p0j" firstAttribute="top" secondItem="eKk-Oe-beA" secondAttribute="top" id="UDN-ue-X1R"/>
                                         <constraint firstItem="Ot8-pK-VyU" firstAttribute="top" secondItem="eKk-Oe-beA" secondAttribute="top" id="fq7-i5-WRq"/>
+                                        <constraint firstAttribute="bottom" secondItem="SE6-SA-nLk" secondAttribute="bottom" id="r9v-1K-Sje"/>
                                         <constraint firstAttribute="bottom" secondItem="61h-JN-YHO" secondAttribute="bottom" constant="8" id="sJj-iq-0MV"/>
                                         <constraint firstItem="jAu-ad-jcg" firstAttribute="top" secondItem="eKk-Oe-beA" secondAttribute="top" constant="10" id="xEv-az-pzn"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="dateBGView" destination="sfS-5g-p0j" id="sbW-e7-NPr"/>
                                     <outlet property="dayLabel" destination="f5p-Xm-bLv" id="Mhc-2A-d24"/>
                                     <outlet property="feedImageView" destination="Ot8-pK-VyU" id="qRd-i8-lz4"/>
                                     <outlet property="locationLabel" destination="TL4-8O-rx9" id="ujV-46-26p"/>
+                                    <outlet property="locationTempBGView" destination="SE6-SA-nLk" id="FlP-wO-Wta"/>
                                     <outlet property="monthLabel" destination="5yZ-io-SXr" id="Afh-df-sOM"/>
                                     <outlet property="tempLabel" destination="beX-jc-WoI" id="c52-Og-xme"/>
                                 </connections>
@@ -186,14 +208,13 @@
                             <outlet property="delegate" destination="qKf-k4-yWE" id="kSP-kr-uO8"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="" image="home-line" selectedImage="home-fill" id="fxv-yg-JEO">
-                        <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Photo Diary" id="F2f-S3-UJu"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JnZ-Mf-Gqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="630.43478260869574" y="-414.50892857142856"/>
+            <point key="canvasLocation" x="1540.5797101449277" y="-414.50892857142856"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="VBs-2P-a8X">
@@ -226,6 +247,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eR6-PO-Zor" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="632" y="391"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bEJ-HA-Rkb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="I4X-dj-u0r" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="home-line" selectedImage="home-fill" id="fxv-yg-JEO">
+                        <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cqd-L2-7dv">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qKf-k4-yWE" kind="relationship" relationship="rootViewController" id="du8-oq-XKF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n7H-x0-3jp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630.43478260869574" y="-414.50892857142856"/>
         </scene>
     </scenes>
     <resources>
