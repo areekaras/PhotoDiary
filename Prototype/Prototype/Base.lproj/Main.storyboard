@@ -56,7 +56,7 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="200" id="Pfl-jK-i1X">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="200" id="Pfl-jK-i1X" customClass="FeedImageCell" customModule="Prototype" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="60.5" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pfl-jK-i1X" id="eKk-Oe-beA">
@@ -172,6 +172,13 @@
                                         <constraint firstItem="jAu-ad-jcg" firstAttribute="top" secondItem="eKk-Oe-beA" secondAttribute="top" constant="10" id="xEv-az-pzn"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dayLabel" destination="f5p-Xm-bLv" id="Mhc-2A-d24"/>
+                                    <outlet property="feedImageView" destination="Ot8-pK-VyU" id="qRd-i8-lz4"/>
+                                    <outlet property="locationLabel" destination="TL4-8O-rx9" id="ujV-46-26p"/>
+                                    <outlet property="monthLabel" destination="5yZ-io-SXr" id="Afh-df-sOM"/>
+                                    <outlet property="tempLabel" destination="beX-jc-WoI" id="c52-Og-xme"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
