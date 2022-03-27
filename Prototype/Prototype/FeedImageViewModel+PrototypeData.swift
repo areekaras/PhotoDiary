@@ -11,66 +11,57 @@ extension FeedImageViewModel {
     static var prototypeFeed: [FeedImageViewModel] {
         return [
             FeedImageViewModel(
-                month: "Mar",
-                day: "27",
+                date: "27-03-2022",
                 location: "Perinthalmanna, KL",
-                temp: "25°",
+                temp: 25,
                 imageName: "image-1"
             ),
             FeedImageViewModel(
-                month: "Mar",
-                day: "28",
+                date: "28-03-2022",
                 location: "Kedarkantha, UK",
-                temp: "-5°",
+                temp: -5,
                 imageName: "image-2"
             ),
             FeedImageViewModel(
-                month: "Mar",
-                day: "29",
+                date: "29-03-2022",
                 location: "Kochi, KL",
-                temp: "28°",
+                temp: 28,
                 imageName: "image-3"
             ),
             FeedImageViewModel(
-                month: "Mar",
-                day: "30",
+                date: "30-03-2022",
                 location: "New Delhi, DL",
-                temp: "9°",
+                temp: 9,
                 imageName: "image-4"
             ),
             FeedImageViewModel(
-                month: "Mar",
-                day: "31",
+                date: "31-03-2022",
                 location: "New Delhi, DL",
-                temp: "9°",
+                temp: 9,
                 imageName: "image-5"
             ),
             FeedImageViewModel(
-                month: "Apr",
-                day: "1",
+                date: "01-04-2022",
                 location: "New Delhi, DL",
-                temp: "8°",
+                temp: 8,
                 imageName: "image-6"
             ),
             FeedImageViewModel(
-                month: "Apr",
-                day: "2",
+                date: "02-04-2022",
                 location: "Kedarkantha, UK",
-                temp: "-4°",
+                temp: -4,
                 imageName: "image-7"
             ),
             FeedImageViewModel(
-                month: "Apr",
-                day: "3",
+                date: "03-04-2022",
                 location: "Kedarkantha, UK",
-                temp: "-7°",
+                temp: -7,
                 imageName: "image-8"
             ),
             FeedImageViewModel(
-                month: "Apr",
-                day: "4",
+                date: "04-04-2022",
                 location: "Kedarkantha, UK",
-                temp: "-1°",
+                temp: -1,
                 imageName: "image-9"
             ),
         ]
